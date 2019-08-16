@@ -6,7 +6,6 @@ import Avatar from '../avatar/avatar'
  * EX: avatar='foo.png' name='user name' email='user email'
  */
 const RowTable = (props) => {
-    //const valid = isValid(props.src)
     return (
         <div style={styles}>
             <div style={flexRows}>
