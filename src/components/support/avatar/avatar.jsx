@@ -29,7 +29,8 @@ const styles = {
     background: colors.backgroundDefault,
     border: '2px solid white',
     borderRadius: '100%',
-    padding: '2px'
+    padding: '2px',
+    maxWidth: '50px'
 }
 
 export default Avatar;
