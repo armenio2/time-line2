@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from '../avatar/avatar'
+import Avatar from '../../avatar/avatar'
 
 
 /**
@@ -16,10 +16,10 @@ const RowTable = (props) => {
                 </div>
                 <div style={rows}>
                     <div style={columns}>
-                        <span>Nome</span>
+                        <span>{props.name}</span>
                     </div>
                     <div style={columns}>
-                        <span>Email</span>
+                        <span>{props.email}</span>
                     </div>
                 </div>
             </div>
