@@ -16,13 +16,19 @@ const isValid = (src) => {
 const Avatar = (props) => {
     const valid = isValid(props.src)
     return (
-        <div>
-            <img
-                src={valid ? props.src : avatar.placeholder}
-                alt={props.alt}
-            />
-        </div>
+        <img
+            style={styles}
+            src={valid ? props.src : avatar.placeholder}
+            alt={props.alt}
+        />
     );
+}
+
+const styles = {
+    border: '2px solid white',
+    borderRadius: '100%',
+    background: 'blue',
+    padding: '2px'
 }
 
 export default Avatar;
