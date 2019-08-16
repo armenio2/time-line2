@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { avatar } from '../../../assets/img'
+import colors from '../../../assets/colors'
 
 const isValid = (src) => {
     if (src) {
@@ -25,9 +26,9 @@ const Avatar = (props) => {
 }
 
 const styles = {
+    background: colors.backgroundDefault,
     border: '2px solid white',
     borderRadius: '100%',
-    background: 'blue',
     padding: '2px'
 }
 
