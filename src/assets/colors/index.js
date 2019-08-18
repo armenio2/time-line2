@@ -3,7 +3,10 @@ const colors = {
     contrastBackgroundDefault: '#4288FA',
     textDefault: '#1A87E3',
     textSecondary: '#BF918E',
-    textNeutral: '#BBBBBB'
+    textNeutral: '#BBBBBB',
+    textStrong: '#166FBA',
+    borderDefault: 'black',
+    borderSecondary: '#E4EADC',
 }
 
 export default colors;

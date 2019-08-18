@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from '../../avatar/avatar'
 
+import colors from '../../../../assets/colors'
 
 /**
  * EX: avatar='foo.png' name='user name' email='user email'
@@ -16,10 +17,10 @@ const RowTable = (props) => {
                 </div>
                 <div style={rows}>
                     <div style={columns}>
-                        <span>{props.name}</span>
+                        <span style={styleName}>{props.name}</span>
                     </div>
                     <div style={columns}>
-                        <span>{props.email}</span>
+                        <span style={styleEmail}>{props.email}</span>
                     </div>
                 </div>
             </div>
@@ -28,14 +29,17 @@ const RowTable = (props) => {
 }
 
 const styles = {
-    background: 'grey',
-    border: '2px solid black',
+    background: 'white',
+    border: '2px solid',
+    borderColor: colors.borderSecondary,
     boxSizing: 'border-box',
     width: '100%',
     height: '70px',
     textAlign: 'center',
+    itemAlign: 'center',
     marginTop: 10,
-    padding: '0px 10px 0px 10px'
+    padding: '0px 10px 0px 10px',
+    boxShadow: '2px 2px 2px grey'
 }
 
 const flexRows = {
@@ -47,9 +51,10 @@ const rows = {
 }
 
 const columnsAvatar = {
-    flex: '50%',
+    flex: '100%',
     width: '20%',
-    padding: '10px',
+    itemAlign: 'center',
+    padding: 5
 }
 
 const columns = {
@@ -57,6 +62,16 @@ const columns = {
     width: '100%',
     bot: '50%',
     padding: '8px',
+}
+
+const styleName = {
+    color: colors.textStrong,
+    fontWeight: 'bold'
+}
+
+const styleEmail = {
+    color: colors.textNeutral,
+    fontWeight: 'bold'
 }
 
 export default RowTable;

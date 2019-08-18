@@ -1,5 +1,8 @@
 import React from 'react';
 import Table from '../../support/table/table.jsx'
+import Header from '../header/header.jsx';
+
+import colors from '../../../assets/colors'
 
 const data = [
     {
@@ -238,9 +241,27 @@ const data = [
 const UserList = (props) => {
     return (
         <div>
-            <Table data={data}></Table>
+            <div style={headerStyle}>
+                <Header />
+            </div>
+            <div style={tableBoxStyle}>
+                <Table data={data}></Table>
+            </div>
         </div>
     );
+}
+
+const headerStyle = {
+    height: '10vh',
+}
+
+const tableBoxStyle = {
+    border: 'solid 1px',
+    borderColor: colors.borderDefault,
+    padding: 10,
+    height: '85vh',
+    overflow: 'auto',
+    background: colors.backgroundDefault
 }
 
 export default UserList;
