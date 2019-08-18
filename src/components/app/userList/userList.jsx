@@ -252,16 +252,17 @@ const UserList = (props) => {
 }
 
 const headerStyle = {
-    height: '10vh',
+    height: '9vh',
 }
 
 const tableBoxStyle = {
-    border: 'solid 1px',
-    borderColor: colors.borderDefault,
+    border: 'solid 3px',
+    borderColor: colors.borderStrong,
+    borderRadius: 15,
     padding: 10,
-    height: '85vh',
+    height: '87vh',
     overflow: 'auto',
-    background: colors.backgroundDefault
+    background: 'white'
 }
 
 export default UserList;

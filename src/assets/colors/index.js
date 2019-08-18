@@ -7,6 +7,7 @@ const colors = {
     textStrong: '#166FBA',
     borderDefault: 'black',
     borderSecondary: '#E4EADC',
+    borderStrong: '#1A87E3'
 }
 
 export default colors;

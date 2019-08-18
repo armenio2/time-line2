@@ -3,12 +3,17 @@ import Avatar from '../../avatar/avatar'
 
 import colors from '../../../../assets/colors'
 
+
+const clickRow = (id) => {
+    console.log("aloha ", id)
+}
+
 /**
  * EX: avatar='foo.png' name='user name' email='user email'
  */
 const RowTable = (props) => {
     return (
-        <div style={styles}>
+        <div onClick={() => clickRow(props.id)} style={styles}>
             <div style={flexRows}>
                 <div style={rows}>
                     <div style={columnsAvatar}>
@@ -39,7 +44,8 @@ const styles = {
     itemAlign: 'center',
     marginTop: 10,
     padding: '0px 10px 0px 10px',
-    boxShadow: '2px 2px 2px grey'
+    boxShadow: '2px 2px 2px grey',
+    cursor: 'pointer'
 }
 
 const flexRows = {
