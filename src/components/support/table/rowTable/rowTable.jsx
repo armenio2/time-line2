@@ -33,7 +33,9 @@ const styles = {
     boxSizing: 'border-box',
     width: '100%',
     height: '70px',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 10,
+    padding: '0px 10px 0px 10px'
 }
 
 const flexRows = {
@@ -46,14 +48,15 @@ const rows = {
 
 const columnsAvatar = {
     flex: '50%',
-    width: '80%',
+    width: '20%',
     padding: '10px',
 }
 
 const columns = {
     flex: '50%',
-    width: '50%',
-    padding: '10px',
+    width: '100%',
+    bot: '50%',
+    padding: '8px',
 }
 
 export default RowTable;

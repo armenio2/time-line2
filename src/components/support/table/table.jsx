@@ -3,9 +3,7 @@ import RowTable from './rowTable/rowTable';
 
 
 const buildTable = (data) => {
-    console.log("data ", data)
     const result = data.map(element => {
-        console.log("element ", element)
         return <RowTable name={element.name} email={element.email} />
     });
     return result
