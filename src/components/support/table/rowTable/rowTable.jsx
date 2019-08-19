@@ -3,9 +3,19 @@ import Avatar from '../../avatar/avatar'
 
 import colors from '../../../../assets/colors'
 
+import { connect } from 'react-redux';
+//import { bindActionCreators } from 'redux';
+import clickButton from '../../../../actions';
+
+const clickButton = ({ dispatch }) => {
+    dispatch(clickButton(1))
+}
 
 const clickRow = (id) => {
-    console.log("aloha ", id)
+    //debugger;
+    console.log("antes do clickbutton ", id)
+    clickButton(id)
+    console.log("depois do clickbutton ")
 }
 
 /**
@@ -13,7 +23,10 @@ const clickRow = (id) => {
  */
 const RowTable = (props) => {
     return (
-        <div onClick={() => clickRow(props.id)} style={styles}>
+        <div
+            onClick={() => clickRow(props.id)}
+            style={styles}
+        >
             <div style={flexRows}>
                 <div style={rows}>
                     <div style={columnsAvatar}>
@@ -80,4 +93,8 @@ const styleEmail = {
     fontWeight: 'bold'
 }
 
-export default RowTable;
+//const mapDispatchToProps = dispatch =>
+//bindActionCreators({ clickButton }, dispatch);
+
+
+export default connect()(RowTable);
