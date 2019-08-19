@@ -1,11 +1,11 @@
 import React from 'react';
-import UserList from './components/app/userList/userList';
+import ScreenView from './components/app/screenView/screenView.jsx';
 
 
 function App() {
   return (
     <div className="App">
-      <UserList />
+      <ScreenView />
     </div>
   );
 }
