@@ -3,10 +3,10 @@ import { createStore } from 'redux';
 
 const initialState = {
     router: '/',
-    userSelected: null
+    userSelected: ''
 };
 
-function allReducer(state = initialState, action) {
+function allReducer(state = initialState, action) { // separar o reducer numa pasta
     switch (action.type) {
         case 'selectedID':
             return {
