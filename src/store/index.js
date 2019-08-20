@@ -1,3 +1,25 @@
 import { createStore } from 'redux';
-import { Reducers } from '../reducers';
-export const Store = createStore(Reducers);
+
+
+const initialState = {
+    router: '/',
+    userSelected: null
+};
+
+function allReducer(state = initialState, action) {
+    switch (action.type) {
+        case 'selectedID':
+            return {
+                ...state,
+                router: action.newRouter,
+                userSelected: action.newUserId
+            };
+        default:
+            return state;
+    }
+}
+
+
+const store = createStore(allReducer);
+
+export default store
