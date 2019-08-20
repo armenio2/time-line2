@@ -34,6 +34,14 @@ const RowTable = (props) => {
                         <span style={styleEmail}>{props.email}</span>
                     </div>
                 </div>
+                <div style={rows}>
+                    <div style={columns}>
+                        <span style={styleName}>{props.title || ''}</span>
+                    </div>
+                    <div style={columns}>
+                        <span style={styleEmail}>{props.body || ''}</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
