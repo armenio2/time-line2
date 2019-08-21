@@ -53,6 +53,7 @@ const tableBoxStyle = {
     borderRadius: 15,
     padding: 10,
     height: '87vh',
+    overflow: 'auto'
 }
 
 export default PostList;
