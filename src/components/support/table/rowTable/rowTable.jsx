@@ -59,7 +59,8 @@ const styles = {
     marginTop: 10,
     padding: '0px 10px 0px 10px',
     boxShadow: '2px 2px 2px grey',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    overflow: 'hidden'
 }
 
 const flexRows = {
