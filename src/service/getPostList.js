@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-const getPostList = async (id, setData, setError) => {
-    axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-        .then(res => setData(res.data)).catch(e => setError(e))
+export default async function GetPostList(id) {
+    return axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`).then(res => res.data)
 }
-
-export default getPostList;

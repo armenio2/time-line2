@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from '../../support/table/table.jsx'
 import Header from '../header/header.jsx';
 
@@ -9,10 +9,16 @@ import GetUserList from '../../../service/getUserList.js';
 const UserList = () => {
     const [data, setData] = useState();
     const [error, setError] = useState();
-    if (!data) {
-        GetUserList(setData, setError)
-    }
-    if (data && !error) {
+
+    useEffect(() => {
+        if (data) return
+        GetUserList().then(setData).catch(setError)
+    }, [])
+
+
+    if (error) {
+        return <div>error</div>
+    } else if (data) {
         return (
             <div>
                 <div style={headerStyle}>
@@ -23,10 +29,8 @@ const UserList = () => {
                 </div>
             </div>
         );
-    } else if (error) {
-        return <div>Error</div>
     } else {
-        return <div>Loading</div> //Todo: Criar um Loading
+        return <div>loading</div> //TODO:  create loading
     }
 }
 

@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from '../../support/table/table.jsx'
 import colors from '../../../assets/colors'
 
 import GetPostList from '../../../service/getPostList.js';
 
 /**
- *  
+ *  Post List
  */
 const PostList = () => {
-    const [pathId, changeId] = useState(window.location.hash.replace('#', ''));
+    const [pathId, /*changeId //TODO: Change ID when click comment  */] = useState(window.location.hash.replace('#', ''));
     const [data, setData] = useState();
     const [error, setError] = useState();
-    if (!data) {
-        GetPostList(pathId, setData, setError)
-    }
 
-    console.log('result ', data)
-    if (data && !error) {
+    useEffect(() => {
+        if (data) return
+        GetPostList(pathId).then(setData).catch(setError)
+    }, [])
+
+    if (data) {
         return (
             <div>
                 <div style={headerStyle}>
@@ -30,7 +31,7 @@ const PostList = () => {
     } else if (error) {
         return <div>Error</div>
     } else {
-        return <div>Loading</div> //Todo: Criar um Loading
+        return <div>loading</div> //TODO:  create loading
     }
 
 }
@@ -46,7 +47,5 @@ const tableBoxStyle = {
     padding: 10,
     height: '87vh',
 }
-
-
 
 export default PostList;
