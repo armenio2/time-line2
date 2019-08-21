@@ -1,25 +1,7 @@
 import { createStore } from 'redux';
 
+import RouterReducer from '../reducer/index.js';
 
-const initialState = {
-    router: '/',
-    userSelected: ''
-};
-
-function allReducer(state = initialState, action) { // separar o reducer numa pasta
-    switch (action.type) {
-        case 'selectedID':
-            return {
-                ...state,
-                router: action.newRouter,
-                userSelected: action.newUserId
-            };
-        default:
-            return state;
-    }
-}
-
-
-const store = createStore(allReducer);
+const store = createStore(RouterReducer);
 
 export default store

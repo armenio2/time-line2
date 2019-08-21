@@ -1,4 +1,4 @@
-const colors = {
+const colors = { //TODO: Create Style Pallete
     backgroundDefault: '#1A87E3',
     contrastBackgroundDefault: '#4288FA',
     textDefault: '#1A87E3',

@@ -3,6 +3,7 @@ import Table from '../../support/table/table.jsx'
 import colors from '../../../assets/colors'
 import Header from '../header/header.jsx';
 import GetPostList from '../../../service/getPostList.js';
+import ScreenSize from '../../../util/screenSize.js';
 
 /**
  *  Post List
@@ -39,8 +40,11 @@ const PostList = () => {
 
 }
 
+const size = ScreenSize()
+const responsivePadding = (size.width > 770) ? '0px 20vh 0px 20vh' : '0px 0px 0px 0px' //TODO: Change Inline CSS to Styled Components
+
 const containerStyle = {
-    padding: '0px 20vh 0px 20vh' //TODO: Fix mobile padding
+    padding: responsivePadding //TODO: Change Responsive Metod
 }
 
 const tableBoxStyle = {
