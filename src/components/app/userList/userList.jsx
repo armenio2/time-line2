@@ -20,22 +20,25 @@ const UserList = () => {
         return <div>error</div>
     } else if (data) {
         return (
-            <div>
-                <div style={headerStyle}>
-                    <Header />
-                </div>
+            <div style={containerStyle}>
+                <Header />
                 <div style={tableBoxStyle}>
                     <Table data={data}></Table>
                 </div>
             </div>
         );
     } else {
-        return <div>loading</div> //TODO:  create loading
+        return (
+            <div>
+                <Header />
+                <p> loading... </p>
+            </div>
+        );//TODO:  create loading
     }
 }
 
-const headerStyle = {
-    height: '9vh',
+const containerStyle = {
+    padding: '0px 20vh 0px 20vh' //TODO: Fix mobile padding
 }
 
 const tableBoxStyle = {

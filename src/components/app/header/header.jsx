@@ -2,15 +2,21 @@ import React from 'react';
 import Avatar from '../../support/avatar/avatar';
 
 /**
- * 
+ * Header generic
  */
-const Header = (props) => {
+const Header = () => {
     return (
-        <div>
+        <div style={styles}>
             <Avatar />
             Name
         </div>
     );
+}
+
+const styles = {
+    height: '8vh',
+    padding: 10,
+    textAlign: 'center'
 }
 
 export default Header;

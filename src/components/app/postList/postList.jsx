@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Table from '../../support/table/table.jsx'
 import colors from '../../../assets/colors'
-
+import Header from '../header/header.jsx';
 import GetPostList from '../../../service/getPostList.js';
 
 /**
@@ -19,10 +19,8 @@ const PostList = () => {
 
     if (data) {
         return (
-            <div>
-                <div style={headerStyle}>
-                    header
-                </div>
+            <div style={containerStyle}>
+                <Header />
                 <div style={tableBoxStyle}>
                     <Table data={data}></Table>
                 </div>
@@ -31,13 +29,18 @@ const PostList = () => {
     } else if (error) {
         return <div>Error</div>
     } else {
-        return <div>loading</div> //TODO:  create loading
+        return (
+            <div>
+                <Header />
+                <p> loading... </p>
+            </div>
+        );//TODO:  create loading
     }
 
 }
 
-const headerStyle = {
-    height: '9vh',
+const containerStyle = {
+    padding: '0px 20vh 0px 20vh' //TODO: Fix mobile padding
 }
 
 const tableBoxStyle = {
